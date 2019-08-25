@@ -1,0 +1,32 @@
+<div class="container">        
+        <h3>Add a Guitar</h3>   
+       
+            <div>   
+              <label>Guitar Type</label>   
+              <%= @guitar.g_type %>   
+            </div>
+            
+            <div>   
+              <label>Model</label>   
+              <%= @guitar.brand_name %>   
+            </div>  
+
+            <div>   
+              <label>No Of String</label>   
+              <%= @guitar.no_of_strings %>   
+            </div>  
+  
+            <div>   
+              <label>Price</label>   
+              <%= @guitar.price %>   
+            </div>   
+            
+            <div>   
+              <label>Bought Date</label>   
+              <%= @guitar.bought_date %>   
+            </div>   
+         
+      <div>   
+        <%= link_to 'Back', { controller: 'guitars', action: 'index'} %>   
+      </div>   
+</div>  

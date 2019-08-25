@@ -1,0 +1,40 @@
+<div class="container">   
+  
+<%= form_for @guitar, url: {action: :update} do |f| %>   
+     
+   <h3>Add a Guitar</h3>   
+ <%= "<div>#{@guitar.errors.full_messages.first}</div>".html_safe if @guitar.errors.any? %>   
+    <p>   
+  
+     <div>   
+        <label>Guitar Type</label>   
+        <%= f.text_field :g_type %>   
+     </div> 
+     
+     <div>   
+        <label>Model Name</label>   
+        <%= @guitar.brand_name %>   
+     </div>
+     
+     <div>   
+        <label>No Of Strings</label>   
+        <%= f.text_field :no_of_strings %>   
+     </div>
+  
+     <div>   
+        <label>Price</label>   
+        <%= f.text_field :price %>   
+     </div>   
+        
+     <div>   
+        <label>Bought Date</label>   
+        <%= f.text_field :bought_date %>   
+     </div>   
+  
+      </p>   
+   <div>   
+      <%= link_to 'Back', { controller: 'guitars', action: 'index'} %>   
+      <%= f.submit 'Update guitar' %>   
+    </div>   
+<% end %>   
+t;/div>  

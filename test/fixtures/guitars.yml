@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  g_type: MyString
+  brand_name: MyString
+  no_of_strings: 
+  price: 
+  bought_date: MyString
+
+two:
+  id: 
+  g_type: MyString
+  brand_name: MyString
+  no_of_strings: 
+  price: 
+  bought_date: MyString

@@ -1,0 +1,42 @@
+<!DOCTYPE html>   
+<html>   
+<body>   
+ <div class="container">   
+    <h3>GUITAR LIST</h3>   
+     
+      <div>   
+        <%= link_to 'Add Guitar', new_guitar_path %>   
+      </div>   
+      <br>   
+    <table border="2">   
+      <thead>   
+      <tr>   
+        <th>Type</th>   
+        <th>Model Name</th>   
+        <th>Number_of_Strings</th>   
+        <th>Price</th>
+        <th>Bought_date</th>
+      </tr>   
+      </thead>   
+      <tbody>   
+      <% @guitars.each do |guitar| %>   
+          <tr>   
+            <td><%= guitar.g_type %></td>   
+            <td><%= guitar.brand_name %></td>
+            <td><%= guitar.no_of_strings %></td>
+            <td><%= guitar.price %></td>  
+            <td><%= guitar.bought_date %></td>  
+            <td> 
+               <div>   
+                <%= link_to 'Show', guitar_path(guitar) %>   
+                <%= link_to 'Edit', edit_guitar_path(guitar) %>   
+                <%= link_to 'Delete', guitar_path(guitar), method: :delete %>   
+              </div>   
+            </td>   
+          </tr>   
+      <% end %>   
+      </tbody>   
+    </table>   
+    </div>   
+  </body>   
+</html>

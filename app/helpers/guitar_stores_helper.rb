@@ -1,0 +1,2 @@
+module GuitarStoresHelper
+end
